@@ -7,5 +7,5 @@ Features:
 - practice history & stats
 
 to do:
-~~understand how to collect some input from the user and print it back in the console~~understand how to collect some input from the user and print it back in the console
+~~understand how to collect some input from the user and print it back in the console~~
 - ...
