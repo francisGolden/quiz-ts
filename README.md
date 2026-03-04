@@ -5,3 +5,7 @@ Features:
 - timer
 - custom practice tests (compose test)
 - practice history & stats
+
+to do:
+~~understand how to collect some input from the user and print it back in the console~~
+- ...
