@@ -1,20 +1,29 @@
 import { isCancel, text } from "@clack/prompts";
+import { JSONFilePreset } from 'lowdb/node'
+
+interface Data {
+    username: string;
+}
+
+// Read or create db.json
+const defaultData: Data = { username: "" }
 
 export const initMenu = async () => {
     try {
-        const username = <String>await text({
+        const db = await JSONFilePreset<Data>('db.json', defaultData)
+        const username = <string>await text({
             message: "Please, write your name.",
             validate: (value) => {
                 if (!value) return "Please enter a value"
             }
         });
-
+        
         if (isCancel(username)) {
             console.log("operation cancelled")
             process.exit(0)
         }
-
-        console.log("Hi, ", username);
+        await db.update((data) => data.username = username)
+        console.log(db)
     } catch (error) {
         console.error("An error occurred:", error)
         process.exit(1)
