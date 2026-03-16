@@ -8,8 +8,10 @@ Features:
 
 to do:
 ~~understand how to collect some input from the user and print it back in the console~~
-- Initialization: save username of the user
-- Dashboard dedicated componentlet: user select the type of questions to practice on, etc
+~~Initialization: get username of the user~~
+- Implement data persistency with node native modules (os, path, fs)
+- Save username in a file
+- Dashboard dedicated component: let user select the type of questions to practice on, etc
 - Quiz dedicated component: quiz logic
 - Analytics component inside the dashboard
 - ...
