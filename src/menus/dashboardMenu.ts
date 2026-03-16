@@ -1,4 +1,5 @@
 import { select } from "@clack/prompts";
+import { initMenu } from "./initMenu";
 
 export const dashboardMenu = async () => {
     const option = await select({
@@ -11,7 +12,19 @@ export const dashboardMenu = async () => {
                 label: "statsLabel",
                 hint: "statsHint",
             },
+            {
+                value: "back",
+                label: "backLabel",
+                hint: "backHint"
+            }
         ],
         maxItems: 5, // Maximum number of items to display at once
     });
+    switch (option){
+        case "back":
+            initMenu(true)
+            break;
+        default: 
+            break;
+    }
 };

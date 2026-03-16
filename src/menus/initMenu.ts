@@ -1,5 +1,6 @@
 import { isCancel, text } from "@clack/prompts";
 import { JSONFilePreset } from 'lowdb/node'
+import { dashboardMenu } from "./dashboardMenu";
 
 interface Data {
     username: string;
@@ -23,7 +24,7 @@ export const initMenu = async (changeUsername: Boolean) => {
             process.exit(0)
         }
         await db.update((data) => data.username = usernameInput)
-        console.log(db.data.username)
+        dashboardMenu()
     } catch (error) {
         console.error("An error occurred:", error)
         process.exit(1)
