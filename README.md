@@ -10,7 +10,7 @@ to do:
 ~~understand how to collect some input from the user and print it back in the console~~
 ~~Initialization: get username of the user~~
 - Implement data persistency with lowdb (structure the json, creat seedfile?, what json file to include in remote project?)
-- gestire il caso in cui si voglia cambiare lo username tornando a initMenu
+- manage the case in which user wants to change the username
 - Save username in a file
 - Dashboard dedicated component: let user select the type of questions to practice on, etc
 - Quiz dedicated component: quiz logic
