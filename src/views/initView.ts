@@ -1,6 +1,6 @@
 import { isCancel, text } from "@clack/prompts";
 import { JSONFilePreset } from 'lowdb/node'
-import { dashboardMenu } from "./dashboardMenu";
+import { dashboardView } from "./dashboardView";
 
 interface Data {
     username: string;
@@ -9,7 +9,7 @@ interface Data {
 // Read or create db.json
 const defaultData: Data = { username: "" }
 
-export const initMenu = async (changeUsername: Boolean) => {
+export const initView = async (changeUsername?: Boolean) => {
     try {
         const db = await JSONFilePreset<Data>('db.json', defaultData)
         const usernameInput = <string>await text({
@@ -24,7 +24,7 @@ export const initMenu = async (changeUsername: Boolean) => {
             process.exit(0)
         }
         await db.update((data) => data.username = usernameInput)
-        dashboardMenu()
+        dashboardView()
     } catch (error) {
         console.error("An error occurred:", error)
         process.exit(1)

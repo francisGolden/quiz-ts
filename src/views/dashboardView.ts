@@ -1,7 +1,7 @@
 import { select } from "@clack/prompts";
-import { initMenu } from "./initMenu";
+import { initView } from "./initView";
 
-export const dashboardMenu = async () => {
+export const dashboardView = async () => {
     const option = await select({
         message: "Select an option",
         options: [
@@ -16,7 +16,7 @@ export const dashboardMenu = async () => {
     });
     switch (option){
         case "back":
-            initMenu(true)
+            initView(true)
             break;
         default: 
             break;

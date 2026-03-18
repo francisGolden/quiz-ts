@@ -1,7 +1,7 @@
-import { initMenu } from "./menus/initMenu"
+import { initView } from "./views/initView"
 
 const main = async () => {
-    await initMenu()
+    await initView()
 }
 
 main()
