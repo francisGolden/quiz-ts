@@ -12,6 +12,7 @@ to do:
 ~~- Implement data persistency with lowdb (based on JSON)~~
 ~~- Dashboard dedicated component: let user select the type of questions to practice on, etc~~
 - manage the case in which user wants to change the username
+- create a knowledge quiz component
 ~~- Save username in a file~~
 - Improve implementation of low db: structure the json, creat seedfile?, what json file to include in remote project?
 
