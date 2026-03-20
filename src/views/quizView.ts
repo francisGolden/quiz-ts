@@ -1,12 +1,14 @@
-import { select } from "@clack/prompts";
+import { quiz } from "../components/quiz";
 
 export const quizView = async () => {
-    try {
-        const option = await select({
-            message: "Uada",
-            options: [{ value: "one", label: "a", hint: "" }],
-        });
-    } catch (error) {
-        console.log(error);
-    }
+    const quizData = {
+        question: "lorem ipsum etcdfksljfldks",
+        options: [
+            { optionId: "id1", optionText: "text first option" },
+            { optionId: "id2", optionText: "text second option" },
+        ],
+        correctAnswer: "id1",
+        id: "quiz1",
+    };
+    quiz(quizData)
 };
