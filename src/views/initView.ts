@@ -24,7 +24,7 @@ export const initView = async (changeUsername?: Boolean) => {
             process.exit(0)
         }
         await db.update((data) => data.username = usernameInput)
-        dashboardView()
+        await dashboardView()
     } catch (error) {
         console.error("An error occurred:", error)
         process.exit(1)
