@@ -1,4 +1,4 @@
-import { select } from "@clack/prompts";
+import { select, isCancel, cancel } from "@clack/prompts";
 import { QuizProps } from "../types/quizTypes";
 // REQUIREMENTS:
 // let's create a quiz component that leverages the select feature of the clack library to create a loop in which
@@ -27,18 +27,15 @@ export const quiz = async ({
                 };
             }),
         });
+
+        if (isCancel(option)) {
+            cancel('Quiz interrotto');
+            process.exit(0);
+        }
         // console.log("selected answer", option, typeof option);
         // console.log("correct answer: ", correctAnswer, typeof correctAnswer);
-        switch (option) {
-            case correctAnswer:
-                // console.log("right!");
-                // console.log("-------------")
-                return 1
-            default:
-                // console.log("wrong!");
-                // console.log("-------------")
-                return 0
-        }
+        return option === correctAnswer ? 1 : 0
+
     } catch (error) {
         console.log(error);
         throw error
