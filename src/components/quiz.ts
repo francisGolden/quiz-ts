@@ -27,16 +27,16 @@ export const quiz = async ({
                 };
             }),
         });
-        console.log("selected answer", option, typeof option);
-        console.log("correct answer: ", correctAnswer, typeof correctAnswer);
+        // console.log("selected answer", option, typeof option);
+        // console.log("correct answer: ", correctAnswer, typeof correctAnswer);
         switch (option) {
             case correctAnswer:
-                console.log("right!");
-                console.log("-------------")
+                // console.log("right!");
+                // console.log("-------------")
                 return 1
             default:
-                console.log("wrong!");
-                console.log("-------------")
+                // console.log("wrong!");
+                // console.log("-------------")
                 return 0
         }
     } catch (error) {

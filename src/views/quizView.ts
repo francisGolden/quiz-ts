@@ -15,7 +15,6 @@ export const quizView = async () => {
     }
 
     console.log(
-        "finished the loop!",
         "correct answers:",
         results.filter((value) => value === 1).length,
         "| wrong answers:",
