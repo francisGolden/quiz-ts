@@ -1,4 +1,8 @@
 import { quiz } from "../components/quiz";
+import { JSONFilePreset } from "lowdb/node";
+import { QuizProps } from "../types/quizTypes";
+
+const defaultData: QuizProps[] = [];
 
 export const quizView = async () => {
     const quizArray = [
@@ -40,8 +44,13 @@ export const quizView = async () => {
         },
     ];
 
-    for (const quizData of quizArray) {
-        await quiz(quizData)
+    try {
+        const {data} = await JSONFilePreset("db.json", []);
+        for (const quizData of data.quizList) {
+            await quiz(quizData)
+        }
+    } catch (error) {
+        console.log(error);
     }
 
     console.log("finished the loop!");
