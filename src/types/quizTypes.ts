@@ -9,3 +9,10 @@ export interface QuizProps {
     correctAnswer: string;
     id: string;
 }
+
+export type QuizList = QuizProps[]
+
+export interface DbSchema {
+  username: string;
+  quizList: QuizList;
+}

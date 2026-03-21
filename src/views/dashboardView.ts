@@ -2,7 +2,7 @@ import { select } from "@clack/prompts";
 import { initView } from "./initView";
 import { quizView } from "./quizView";
 
-export const dashboardView = async () => {
+export const dashboardView = async (): Promise<void> => {
     try {
         const option = await select({
             message: "Select an option",
