@@ -14,8 +14,9 @@ to do:
 - ~~create a knowledge quiz component~~
 - ~~Save username in a file~~
 - ~~Dashboard dedicated component: let user select the type of questions to practice on, etc~~
-- TO-DO: think about the implementation of the quiz loop
-- Improve implementation of low db: structure the json, creat seedfile?, what json file to include in remote project?
-- Quiz dedicated component: quiz logic
+- ~~TO-DO: think about the implementation of the quiz loop~~
+- ~~Improve implementation of low db: structure the json, creat seedfile?, what json file to include in remote project?~~
+- TO-DO: Get quiz data from db
+- TO-DO: Save results somewhere (in the state and/or in the db)
 - Analytics component inside the dashboard
 - ...
