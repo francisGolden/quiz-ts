@@ -15,7 +15,7 @@ export const quiz = async ({
     options,
     correctAnswer,
     id,
-}: QuizProps) => {
+}: QuizProps): Promise<0 | 1> => {
     try {
         const option = await select({
             message: question,
@@ -41,5 +41,6 @@ export const quiz = async ({
         }
     } catch (error) {
         console.log(error);
+        throw error
     }
 };
