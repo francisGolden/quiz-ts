@@ -34,12 +34,10 @@ export const quiz = async ({
                 console.log("right!");
                 console.log("-------------")
                 return 1
-                break;
             default:
                 console.log("wrong!");
                 console.log("-------------")
                 return 0
-                break;
         }
     } catch (error) {
         console.log(error);
