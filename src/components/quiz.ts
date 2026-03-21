@@ -29,7 +29,7 @@ export const quiz = async ({
         });
 
         if (isCancel(option)) {
-            cancel('Quiz interrotto');
+            cancel('Quiz interrupted');
             process.exit(0);
         }
         // console.log("selected answer", option, typeof option);
