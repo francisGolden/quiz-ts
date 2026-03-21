@@ -32,9 +32,11 @@ export const quiz = async ({
         switch (option) {
             case correctAnswer:
                 console.log("right!");
+                console.log("-------------")
                 break;
             default:
                 console.log("wrong!");
+                console.log("-------------")
                 break;
         }
     } catch (error) {

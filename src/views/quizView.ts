@@ -10,5 +10,10 @@ export const quizView = async () => {
         correctAnswer: "id1",
         id: "quiz1",
     };
-    quiz(quizData)
+    let i = 0
+    while (i <= 2) {
+        await quiz(quizData)
+        i++
+    }
+    console.log("finished the loop!")
 };
