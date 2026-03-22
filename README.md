@@ -17,7 +17,7 @@ to do:
 - ~~TO-DO: think about the implementation of the quiz loop~~
 - ~~Improve implementation of low db: structure the json, creat seedfile?, what json file to include in remote project?~~
 - ~~TO-DO: Get quiz data from db~~
-- TO-DO: Add type safety to the quiz loop code
+- ~~TO-DO: Add type safety to the quiz loop code~~
 - TO-DO: Save results somewhere (in the state and/or in the db)
 - Analytics component inside the dashboard
 - ...
