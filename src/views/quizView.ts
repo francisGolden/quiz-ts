@@ -1,6 +1,7 @@
 import { quiz } from "../components/quiz";
 import { JSONFilePreset } from "lowdb/node";
 import { DbSchema } from "../types/quizTypes";
+import { dashboardView } from "./dashboardView";
 
 export const quizView = async (): Promise<void> => {
     let results = [];
@@ -24,4 +25,5 @@ export const quizView = async (): Promise<void> => {
         "| wrong answers:",
         results.filter((value) => value === 0).length,
     );
+    await dashboardView();
 };
