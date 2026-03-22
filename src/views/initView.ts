@@ -9,7 +9,7 @@ interface Data {
 // Read or create db.json
 const defaultData: Data = { username: "" }
 
-export const initView = async (changeUsername?: Boolean) => {
+export const initView = async (changeUsername?: Boolean): Promise<void> => {
     try {
         const db = await JSONFilePreset<Data>('db.json', defaultData)
         const usernameInput = <string>await text({
@@ -24,7 +24,7 @@ export const initView = async (changeUsername?: Boolean) => {
             process.exit(0)
         }
         await db.update((data) => data.username = usernameInput)
-        dashboardView()
+        await dashboardView()
     } catch (error) {
         console.error("An error occurred:", error)
         process.exit(1)
