@@ -1,11 +1,11 @@
 import { quiz } from "../components/quiz";
 import { JSONFilePreset } from "lowdb/node";
-import { DbSchema, Answer, AnswerList } from "../types/quizTypes";
+import { DbSchema, AnswerList } from "../types/quizTypes";
 import { dashboardView } from "./dashboardView";
 
 
 export const quizView = async (): Promise<void> => {
-    let results = []; // this should be of type AnswerList
+    let results: AnswerList = []; // this should be of type AnswerList
     try {
         const defaultData: DbSchema = { 
             username: "Guest", 
@@ -20,11 +20,6 @@ export const quizView = async (): Promise<void> => {
         console.log(error);
     }
 
-    console.log(
-        "correct answers:",
-        results.filter((value) => value === 1).length,
-        "| wrong answers:",
-        results.filter((value) => value === 0).length,
-    );
+    console.log(results) // here I should call an async function that takes in the AnswerList array and pushes it into the database
     await dashboardView();
 };
