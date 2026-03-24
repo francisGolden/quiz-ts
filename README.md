@@ -19,5 +19,6 @@ to do:
 - ~~TO-DO: Get quiz data from db~~
 - ~~TO-DO: Add type safety to the quiz loop code~~
 - DOING: Save results somewhere (in the state and/or in the db)
+- DOING: Think about how to add date to the savedTest that will be added to the db
 - Analytics component inside the dashboard
 - ...
