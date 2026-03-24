@@ -32,9 +32,8 @@ export const quiz = async ({
             cancel('Quiz interrupted');
             process.exit(0);
         }
-        // console.log("selected answer", option, typeof option);
-        // console.log("correct answer: ", correctAnswer, typeof correctAnswer);
-        return option === correctAnswer ? 1 : 0
+
+        return option === correctAnswer ? 1 : 0 // this should return an Answer object containing the expected values
 
     } catch (error) {
         console.log(error);

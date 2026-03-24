@@ -1,10 +1,11 @@
 import { quiz } from "../components/quiz";
 import { JSONFilePreset } from "lowdb/node";
-import { DbSchema } from "../types/quizTypes";
+import { DbSchema, Answer, AnswerList } from "../types/quizTypes";
 import { dashboardView } from "./dashboardView";
 
+
 export const quizView = async (): Promise<void> => {
-    let results = [];
+    let results = []; // this should be of type AnswerList
     try {
         const defaultData: DbSchema = { 
             username: "Guest", 
@@ -13,7 +14,7 @@ export const quizView = async (): Promise<void> => {
         const { data } = await JSONFilePreset<DbSchema>("db.json", defaultData);
         for (const quizData of data.quizList) {
             const answer = await quiz(quizData);
-            results.push(answer);
+            results.push(answer); // this should take the right type (Answer)
         }
     } catch (error) {
         console.log(error);
