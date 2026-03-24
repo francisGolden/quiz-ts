@@ -1,5 +1,5 @@
 import { select, isCancel, cancel } from "@clack/prompts";
-import { QuizProps } from "../types/quizTypes";
+import { QuizProps, Answer } from "../types/quizTypes";
 // REQUIREMENTS:
 // let's create a quiz component that leverages the select feature of the clack library to create a loop in which
 // the user is asked a question and he has to select the right answer from a list of options.
@@ -15,7 +15,7 @@ export const quiz = async ({
     options,
     correctAnswer,
     id,
-}: QuizProps): Promise<0 | 1> => {
+}: QuizProps): Promise<Answer> => {
     try {
         const option = await select({
             message: question,
@@ -32,8 +32,7 @@ export const quiz = async ({
             cancel('Quiz interrupted');
             process.exit(0);
         }
-
-        return option === correctAnswer ? 1 : 0 // this should return an Answer object containing the expected values
+        return {question, options, correctAnswer, givenAnswer: option}
 
     } catch (error) {
         console.log(error);
