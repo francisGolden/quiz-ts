@@ -28,5 +28,5 @@ type RecordedSessions = Session[]
 
 export interface Session {
     sessionAnswers: AnswerList;
-    sessionDate: Date;
+    sessionDate: number;
 }

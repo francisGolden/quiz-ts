@@ -9,10 +9,18 @@ const defaultData: DbSchema = {
     recordedSessions: []
 };
 
-const addTestToPreviousTests = async (test: AnswerList) => {
+const addToPreviousSessions = async (test: AnswerList) => {
     const db = await JSONFilePreset<DbSchema>("db.json", defaultData)
     console.log(test)
-    // write the update function
+    const ts = Date.now()
+
+    const session: Session = {
+        sessionAnswers: test,
+        sessionDate: ts
+    }
+    await db.update((data) => {
+        data.recordedSessions.push(session)
+    })
 }
 
 export const quizView = async (): Promise<void> => {
@@ -30,7 +38,7 @@ export const quizView = async (): Promise<void> => {
     }
 
     try {
-        await addTestToPreviousTests(results)
+        await addToPreviousSessions(results)
     } catch (error) {
         console.log(error)
     }
