@@ -18,7 +18,8 @@ to do:
 - ~~Improve implementation of low db: structure the json, creat seedfile?, what json file to include in remote project?~~
 - ~~TO-DO: Get quiz data from db~~
 - ~~TO-DO: Add type safety to the quiz loop code~~
-- DOING: Save results somewhere (in the state and/or in the db)
-- DOING: Think about how to add date to the savedTest that will be added to the db
-- Analytics component inside the dashboard
+- ~~Save results in DB~~
+- ~~Think about how to add date to the savedTest that will be added to the db~~
+- Don't ask name if the username is already filled in the db
+- View the previous results and extract some analytics from them
 - ...

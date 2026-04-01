@@ -18,6 +18,7 @@ const addToPreviousSessions = async (test: AnswerList) => {
         sessionAnswers: test,
         sessionDate: ts
     }
+    
     await db.update((data) => {
         data.recordedSessions.push(session)
     })
