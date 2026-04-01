@@ -1,11 +1,12 @@
 import { quiz } from "../components/quiz";
 import { JSONFilePreset } from "lowdb/node";
-import { DbSchema, AnswerList } from "../types/quizTypes";
+import { DbSchema, AnswerList, Session } from "../types/quizTypes";
 import { dashboardView } from "./dashboardView";
 
 const defaultData: DbSchema = { 
     username: "Guest", 
-    quizList: [] 
+    quizList: [],
+    recordedSessions: []
 };
 
 const addTestToPreviousTests = async (test: AnswerList) => {
