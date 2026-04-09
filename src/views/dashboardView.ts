@@ -23,7 +23,7 @@ export const dashboardView = async (): Promise<void> => {
         });
         switch (option) {
             case "back":
-                initView(true);
+                initView();
                 break;
             case "euKnowledge":
                 quizView();
