@@ -20,6 +20,6 @@ to do:
 - ~~TO-DO: Add type safety to the quiz loop code~~
 - ~~Save results in DB~~
 - ~~Think about how to add date to the savedTest that will be added to the db~~
-- Don't ask name if the username is already filled in the db
+- TO-DO: Don't ask name if the username is already filled in the db
 - View the previous results and extract some analytics from them
 - ...
