@@ -9,7 +9,7 @@ interface Data {
 // Read or create db.json
 const defaultData: Data = { username: "" }
 
-export const initView = async (changeUsername?: Boolean): Promise<void> => {
+export const initView = async (): Promise<void> => {
     try {
         const db = await JSONFilePreset<Data>('db.json', defaultData)
         const usernameInput = <string>await text({
