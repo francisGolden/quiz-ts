@@ -1,6 +1,7 @@
 import { select, cancel } from "@clack/prompts";
 import { initView } from "./initView";
 import { quizView } from "./quizView";
+import { profileView } from "./profileView";
 
 export const dashboardView = async (): Promise<void> => {
     try {
@@ -11,6 +12,11 @@ export const dashboardView = async (): Promise<void> => {
                 {
                     value: "back",
                     label: "Go back",
+                    hint: "",
+                },
+                {
+                    value: "profile",
+                    label: "Profile",
                     hint: "",
                 },
                 {
@@ -27,6 +33,9 @@ export const dashboardView = async (): Promise<void> => {
                 break;
             case "euKnowledge":
                 quizView();
+                break;
+            case "profile":
+                profileView();
                 break;
             case "close":
                 cancel('Application closed');

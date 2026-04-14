@@ -21,6 +21,6 @@ to do:
 - ~~Save results in DB~~
 - ~~Think about how to add date to the savedTest that will be added to the db~~
 - ~~TO-DO: Don't ask name if the username is already filled in the db~~
-- TO-DO: Give user the option to change the username
-- View the previous results and extract some analytics from them
+- ~~TO-DO: Give user the option to change the username~~
+- TO-DO: View the previous results and extract some analytics from them
 - ...
