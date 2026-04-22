@@ -1,6 +1,7 @@
 import { select, cancel, text, isCancel } from "@clack/prompts";
 import { JSONFilePreset } from "lowdb/node";
 import { dashboardView } from "./dashboardView";
+import { analyticsView } from "./analyticsview";
 
 interface Data {
     username: string;
@@ -14,6 +15,7 @@ export const profileView = async (): Promise<void> => {
             message: "Select an option",
             options: [
                 { value: "changeUsername", label: "Change username", hint: "" },
+                { value: "analyticsView", label: "Analytics", hint: ""},
                 {
                     value: "back",
                     label: "Go back",
@@ -43,6 +45,9 @@ export const profileView = async (): Promise<void> => {
                 }
                 await db.update((data) => (data.username = usernameInput));
                 profileView()
+                break;
+            case "analyticsView":
+                analyticsView();
                 break;
             case "back":
                 dashboardView();
