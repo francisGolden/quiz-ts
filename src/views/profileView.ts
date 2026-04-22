@@ -14,6 +14,7 @@ export const profileView = async (): Promise<void> => {
             message: "Select an option",
             options: [
                 { value: "changeUsername", label: "Change username", hint: "" },
+                { value: "analyticsView", label: "Analytics", hint: ""},
                 {
                     value: "back",
                     label: "Go back",
@@ -43,6 +44,8 @@ export const profileView = async (): Promise<void> => {
                 }
                 await db.update((data) => (data.username = usernameInput));
                 profileView()
+                break;
+            case "analyticsView":
                 break;
             case "back":
                 dashboardView();
