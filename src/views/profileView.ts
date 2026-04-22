@@ -1,6 +1,7 @@
 import { select, cancel, text, isCancel } from "@clack/prompts";
 import { JSONFilePreset } from "lowdb/node";
 import { dashboardView } from "./dashboardView";
+import { analyticsView } from "./analyticsview";
 
 interface Data {
     username: string;
@@ -46,6 +47,7 @@ export const profileView = async (): Promise<void> => {
                 profileView()
                 break;
             case "analyticsView":
+                analyticsView();
                 break;
             case "back":
                 dashboardView();
